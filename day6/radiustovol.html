@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Radius To volume</title>
+    <style>
+        body{
+            background-color: beige;
+            text-align: center;
+        }
+        #tab{
+            border: 1px solid;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 400px;
+            border-radius: 5px;
+        }
+        #r{
+            height: 25px;
+            width: 260px;
+        }
+        button{
+            background-color:black;
+            border: none;
+            border-radius:8px ;
+            color: white;
+            text-align: center;
+            width: 270px;
+            height: 30px
+        }
+    </style>
+</head>
+<body>
+    <div id="tab">
+    <h2>Calculate Volume<br> of Sphere</h2>
+    <input type="number" placeholder="Enter the radius" id="r">
+    <br><br>
+    <button onclick="volume()">Result</button>
+    <h4 id="output"></h4>
+    </div>
+    <script>
+        function volume(){
+            let rad=document.getElementById("r").value
+            const pi=Math.PI
+            let res=(4/3)*pi*Math.pow(parseFloat(rad),3)
+            document.getElementById("output").innerHTML= "Volume: "+ res.toFixed(2)
+        }
+    </script>
+</body>
+</html>
