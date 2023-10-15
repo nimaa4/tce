@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <style>
+        #tab{
+            border: 1px solid;
+            width:300px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 20px;
+            background-color:white;
+            box-shadow: 0 0 10px rgba(146, 115, 128, 0.39);
+            border-radius: 5px;
+        }
+        body{
+            background-color: beige;
+        }
+        input{
+            height: 25px;
+            width: 260px;
+            font-size: 12px;
+        }
+        select{
+            height: 25px;
+            width: 40px;
+            font-size: 12px;
+        }
+        button{
+            background-color:black;
+            border: none;
+            border-radius:8px ;
+            color: white;
+            text-align: center;
+            width: 270px;
+            height: 30px
+        }
+    </style>
+</head>
+<body>
+    <div id="tab">
+    <h3>Simple Calculator</h3>
+    <input type="number" placeholder="Enter number 1: " id="n1"/>
+    <br><br>
+    <select name="operators" id="opr">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <br><br>
+    <input type="number" placeholder="Enter number 2: " id="n2"/>
+    <br><br>
+    <button onclick="c()">Result</button>
+    <h4 id="output"></h4>
+    <script>
+        function c(){
+    let num1=document.getElementById("n1").value
+    let num2=document.getElementById("n2").value
+    let opr=document.querySelector("#opr").value
+    let res;
+    if(opr=='+'){
+        res=parseFloat(num1)+parseFloat(num2)
+        document.getElementById("output").innerHTML= "Your answer is "+ res+ " :)"
+    }
+    else if(opr=='-'){
+        res=parseFloat(num1)-parseFloat(num2)
+        document.getElementById("output").innerHTML= "Your answer is "+ res+ " :)"
+    }
+    else if(opr=='*'){
+        res=parseFloat(num1)*parseFloat(num2)
+        document.getElementById("output").innerHTML= "Your answer is "+ res+ " :)"
+    }  
+    else if(opr=='/'){
+        res=parseFloat(num1)/parseFloat(num2)
+        document.getElementById("output").innerHTML= "Your answer is "+ res+ " :)"
+    }         
+    }
+    </script>
+    </div>
+</body>
+</html>
