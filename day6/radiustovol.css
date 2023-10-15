@@ -1,0 +1,26 @@
+body{
+    background-color: beige;
+    text-align: center;
+}
+#tab{
+    border: 1px solid;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 400px;
+    border-radius: 5px;
+}
+#r{
+    height: 25px;
+    width: 260px;
+}
+button{
+    background-color:black;
+    border: none;
+    border-radius:8px ;
+    color: white;
+    text-align: center;
+    width: 270px;
+    height: 30px
+}
